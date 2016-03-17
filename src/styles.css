@@ -1,0 +1,17 @@
+body {
+  background: gainsboro;
+}
+
+.chip {
+  transition: all 0.3s;
+}
+
+.chip .game-year {
+  margin: 0 15px 0 15px;
+  cursor: pointer;
+}
+
+.chip:hover {
+  background-color: #A8DBA8;
+  /*color: gainsboro;*/
+}
