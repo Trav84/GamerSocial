@@ -3,14 +3,16 @@ require('./styles.css');
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-import Header from './components/Header.js';
-import Event from './components/Event.js';
+import Header from './components/Header';
+import CreateEvent from './components/CreateEvent';
+import EventList from './components/EventList';
 
 export default ReactDOM.render(
   <section>
     <Header />
     <section className="container">
-      <Event />
+      <CreateEvent />
+      <EventList />
     </section>
   </section>,
   document.getElementById('react-mount')

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Event extends React.Component {
+class CreateEvent extends React.Component {
   static defaultProps = {
   };
 
@@ -80,4 +80,4 @@ class Event extends React.Component {
   }
 }
 
-export default Event;
+export default CreateEvent;
