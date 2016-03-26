@@ -1,0 +1,20 @@
+.event-list {
+  .card-title {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .chip {
+    margin: 0 0 10px 0;
+  }
+
+  .add-icon,
+  .close-icon {
+    transition: color 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      color: #ffab40;
+    }
+  }
+}
