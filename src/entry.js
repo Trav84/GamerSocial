@@ -6,6 +6,7 @@ var ReactDOM = require('react-dom');
 import Header from './components/Header';
 import CreateEvent from './components/CreateEvent';
 import EventList from './components/EventList';
+import MyQueue from './components/MyQueue';
 
 export default ReactDOM.render(
   <section>
@@ -13,6 +14,7 @@ export default ReactDOM.render(
     <section className="container">
       <CreateEvent />
       <EventList />
+      <MyQueue  />
     </section>
   </section>,
   document.getElementById('react-mount')

@@ -12,12 +12,16 @@ class Header extends React.Component {
           <a href="#" data-activates="nav-mobile" className="button-collapse"><i className="material-icons">menu</i></a>
           <ul id="nav" className="right hide-on-med-and-down">
             <li><a href="#">Create Game Event</a></li>
-            <li><a href="#">Your Games</a></li>
+            <li><a href="#">View Games</a></li>
+            <li><a href="#">Your Queue</a></li>
+            <li><a href="#">Profile</a></li>
             <li><a href="#">Sign Out</a></li>
           </ul>
           <ul id="nav-mobile" className="side-nav">
             <li><a href="#">Create Game Event</a></li>
-            <li><a href="#">Your Games</a></li>
+            <li><a href="#">View Games</a></li>
+            <li><a href="#">Your Queue</a></li>
+            <li><a href="#">Profile</a></li>
             <li><a href="#">Sign Out</a></li>
           </ul>
         </div>
