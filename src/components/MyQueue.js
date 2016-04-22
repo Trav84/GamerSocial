@@ -5,6 +5,10 @@ import React from 'react';
 import './my-queue.scss';
 
 class MyQueue extends React.Component {
+  componentDidMount = () => {
+
+  };
+
   render() {
     return (
       <section className="my-queue">
@@ -18,10 +22,12 @@ class MyQueue extends React.Component {
               </div>
               <div className="collapsible-body">
                 <div className="details">
+                  <h3>Details</h3>
                   <p>Server Name/IP: Frank's MC Server</p>
                   <p>Server Password: Frankyfrank</p>
                 </div>
                 <div className="gamers">
+                  <h3>Gamers</h3>
                   <div className="chip">
                     <img src="https://img.buzzfeed.com/buzzfeed-static/static/2014-06/13/9/campaign_images/webdr06/31-things-you-have-to-deal-with-as-the-only-black-2-3779-1402667423-0_big.jpg" alt="Contact Person"/>
                     Jane Doe

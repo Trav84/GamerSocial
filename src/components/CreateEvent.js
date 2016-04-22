@@ -1,7 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+var Rebase = require('re-base');
+var base = Rebase.createClass('https://gamerhub.firebaseio.com/');
+
 class CreateEvent extends React.Component {
+  constructor(props) {
+    super(props);
+    //Init datapicker.js, part of Materalize
+    //$('.datepicker').pickadate({
+    //  formatSubmit: 'yyyy/mm/dd'
+    //});
+  };
+
   static defaultProps = {
   };
 
@@ -11,13 +22,6 @@ class CreateEvent extends React.Component {
   state = {
     game: '',
     eventDate: ''
-  };
-
-  componentDidMount = () => {
-    //Init datapicker.js, part of Materalize
-    //$('.datepicker').pickadate({
-    //  formatSubmit: 'yyyy/mm/dd'
-    //});
   };
 
   handleGameChange = (e) => {
@@ -35,6 +39,11 @@ class CreateEvent extends React.Component {
     var date = this.state.eventDate;
     if(!game || !date) {
       return;
+    }
+    else {
+      base.push(`gameEvents`, {
+        data: { game: game, eventDate: date }
+      });
     }
 
     this.setState({
