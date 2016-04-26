@@ -14,6 +14,7 @@ export default ReactDOM.render(
     <section className="container">
       <EventList />
       <CreateEvent />
+      <MyQueue />
     </section>
   </section>,
   document.getElementById('react-mount')

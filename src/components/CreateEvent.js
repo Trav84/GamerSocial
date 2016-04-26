@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 
 var Rebase = require('re-base');
 var base = Rebase.createClass('https://gamerhub.firebaseio.com/');
+var Datetime = require('react-datetime');
+
+import '../../node_modules/react-datetime/css/react-datetime.css';
 
 class CreateEvent extends React.Component {
   constructor(props) {
@@ -29,7 +32,8 @@ class CreateEvent extends React.Component {
   };
 
   handleEventDateChange = (e) => {
-      this.setState({eventDate: e.target.value});
+    console.log(e.format("ddd, hA"));
+      this.setState( {eventDate: e.format('ddd, hA')} )
   };
 
   onSubmit = (e) => {
@@ -71,11 +75,9 @@ class CreateEvent extends React.Component {
                 <label htmlFor="game">What Game?</label>
               </div>
               <div className="input-field col s12">
-                <input
-                  value={ this.state.eventDate }
+                <Datetime
                   onChange={ this.handleEventDateChange }
                   id="date"
-                  type="date"
                 />
               </div>
               <button className="btn waves-effect waves-light" type="submit" name="action">Submit
