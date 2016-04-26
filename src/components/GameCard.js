@@ -13,13 +13,6 @@ class GameCard extends React.Component {
       gamers: { name: "Travis" }
     });
   };
-  componentDidMount = () => {
-    base.bindToState('gameEvents', {
-      context: this,
-      state: 'gameEvents',
-      asArray: true
-    });
-  };
   render() {
     var games = this.props.items.map((item, index) => {
       return (
