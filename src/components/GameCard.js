@@ -13,9 +13,6 @@ class GameCard extends React.Component {
       gamers: { name: "Travis" }
     });
   };
-  componentDidMount = () => {
-
-  };
   render() {
     var games = this.props.items.map((item, index) => {
       return (
