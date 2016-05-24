@@ -16,13 +16,16 @@ class EventList extends React.Component {
       gameEvents: []
     }
   }
-  componentDidMount = () => {
-    base.bindToState('gameEvents', {
+  componentDidMount() {
+   this.ref = base.bindToState('gameEvents', {
       context: this,
       state: 'gameEvents',
       asArray: true
     });
-  };
+  }
+  componentWillUnmount() {
+    base.removeBinding(this.ref);
+  }
   render() {
     return (
       <div className="row event-list">
