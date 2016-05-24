@@ -24,7 +24,6 @@ class Header extends React.Component {
             <li><Link to="/login">Sign In</Link></li>
           </ul>
         </div>
-        {this.props.children}
       </nav>
         {this.props.children}
       </div>
