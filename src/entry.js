@@ -8,14 +8,15 @@ import CreateEvent from './components/CreateEvent';
 import EventList from './components/EventList';
 import MyQueue from './components/MyQueue';
 
+import { Router, Route, Link, hashHistory } from 'react-router'
+
 export default ReactDOM.render(
-  <section>
-    <Header />
-    <section className="container">
-      <EventList />
-      <CreateEvent />
-    </section>
-  </section>,
+    	<Router history={hashHistory}>
+	    	<Route path="/" component={Header}>
+	    	  	<Route path="/eventlist" component={EventList}/>
+		      	<Route path="/createevent" component={CreateEvent}/>
+            </Route>
+      	</Router>,
   document.getElementById('react-mount')
 );
 
