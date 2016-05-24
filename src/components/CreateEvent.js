@@ -6,9 +6,6 @@ var base = Rebase.createClass('https://gamerhub.firebaseio.com/');
 var Datetime = require('react-datetime');
 var Select = require('react-select');
 
-import "../../node_modules/react-select/dist/react-select.min.css";
-import '../../node_modules/react-datetime/css/react-datetime.css';
-
 //TODO: Put this in database
 var options = [
   { value: 'Minecraft', label: 'Minecraft' },

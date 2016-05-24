@@ -7,7 +7,7 @@ var Rebase = require('re-base');
 var base = Rebase.createClass('https://gamerhub.firebaseio.com/');
 
 class GameCard extends React.Component {
-  handleAddGameToQueue = (key) => {
+  handleAddGameToQueue(key){
     console.log('Game added to your queue');
     base.push('gameEvents/' +key , {
       gamers: { name: "Travis" }
@@ -41,7 +41,7 @@ class GameCard extends React.Component {
         </div>
       );
     });
-
+    console.log(games);
     return (
       <div>
         { games }
