@@ -3,20 +3,22 @@ import ReactDOM from 'react-dom';
 
 var Rebase = require('re-base');
 var base = Rebase.createClass('https://gamerhub.firebaseio.com/');
+var Datetime = require('react-datetime');
+var Select = require('react-select');
+
+import "../../node_modules/react-select/dist/react-select.min.css";
+import '../../node_modules/react-datetime/css/react-datetime.css';
+
+//TODO: Put this in database
+var options = [
+  { value: 'Minecraft', label: 'Minecraft' },
+  { value: 'Team Fortress 2', label: 'Team Fortress 2' },
+  { value: 'Civilization 5', label: 'Civilization 5' }
+];
 
 class CreateEvent extends React.Component {
   constructor(props) {
     super(props);
-    //Init datapicker.js, part of Materalize
-    //$('.datepicker').pickadate({
-    //  formatSubmit: 'yyyy/mm/dd'
-    //});
-  };
-
-  static defaultProps = {
-  };
-
-  static propTypes = {
   };
 
   state = {
@@ -25,11 +27,13 @@ class CreateEvent extends React.Component {
   };
 
   handleGameChange = (e) => {
-    this.setState({game: e.target.value});
+    console.log(e.value);
+    this.setState({game: e.value});
   };
 
   handleEventDateChange = (e) => {
-      this.setState({eventDate: e.target.value});
+    console.log(e.format("ddd, hA"));
+      this.setState( {eventDate: e.format('ddd, hA')} )
   };
 
   onSubmit = (e) => {
@@ -59,24 +63,25 @@ class CreateEvent extends React.Component {
         <div className="row">
           <form onSubmit={ this.onSubmit } className="col s12">
             <div className="row">
+              <Select
+                onChange={ this.handleGameChange }
+                placeholder="Minecraft"
+                id="game"
+                type="text"
+                className="validate"
+                options={options}
+              />
               <div className="input-field col s12">
-                <input
-                  onChange={ this.handleGameChange }
-                  value={ this.state.game }
-                  placeholder="Minecraft"
-                  id="game"
-                  type="text"
-                  className="validate"
-                />
-                <label htmlFor="game">What Game?</label>
+
+                <label className="active" htmlFor="game">What Game?</label>
               </div>
               <div className="input-field col s12">
-                <input
-                  value={ this.state.eventDate }
+                <Datetime
                   onChange={ this.handleEventDateChange }
                   id="date"
-                  type="date"
+                  placeholder="FRI, 8 PM"
                 />
+                <label className="active" htmlFor="game">What Time?</label>
               </div>
               <button className="btn waves-effect waves-light" type="submit" name="action">Submit
                 <i className="material-icons right">send</i>
