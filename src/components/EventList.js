@@ -1,6 +1,3 @@
-/**
- * Created by trav84 on 2/21/16.
- */
 import React from 'react';
 import './event-list.scss';
 
@@ -28,11 +25,11 @@ class EventList extends React.Component {
   }
   render() {
     return (
-      <div className="row event-list">
+      <section className="row event-list">
         <GameCard
           items = { this.state.gameEvents }
         />
-      </div>
+      </section>
     );
   }
 }

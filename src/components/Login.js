@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Link } from 'react-router';
 
 var Rebase = require('re-base');
 var base = Rebase.createClass('https://gamerhub.firebaseio.com/');
+
+import "./login.scss";
 
 class Login extends React.Component {
   constructor(props) {
@@ -29,7 +32,7 @@ class Login extends React.Component {
           <a className="waves-effect waves-light btn" onClick={ () => { this.login("facebook") } }>Facebook</a>
         </div>
         <div className="row">
-          <a className="waves-effect waves-light btn">Register</a>
+          <Link to="/Register" className="waves-effect waves-light btn">Register</Link>
         </div>
       </section>
     );
