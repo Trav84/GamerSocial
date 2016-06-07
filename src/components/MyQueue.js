@@ -1,6 +1,3 @@
-/**
- * Created by trav84 on 2/21/16.
- */
 import React from 'react';
 import './my-queue.scss';
 
