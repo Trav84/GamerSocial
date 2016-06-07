@@ -16,24 +16,25 @@ var options = [
 class CreateEvent extends React.Component {
   constructor(props) {
     super(props);
-  };
+  }
 
   state = {
-    game: '',
-    eventDate: ''
-  };
+    game: "",
+    eventDate: ""
+  }
 
-  handleGameChange = (e) => {
+
+  handleGameChange(e) {
     console.log(e.value);
     this.setState({game: e.value});
   };
 
-  handleEventDateChange = (e) => {
+  handleEventDateChange(e)  {
     console.log(e.format("ddd, hA"));
       this.setState( {eventDate: e.format('ddd, hA')} )
   };
 
-  onSubmit = (e) => {
+  onSubmit(e) {
     e.preventDefault();
     console.log('Form submitted');
     var game = this.state.game;

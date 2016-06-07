@@ -9,7 +9,7 @@ class Login extends React.Component {
     super(props);
   };
 
-  login = () => {
+  login(){
 
   };
 

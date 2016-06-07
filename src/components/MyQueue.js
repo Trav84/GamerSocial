@@ -5,7 +5,7 @@ import React from 'react';
 import './my-queue.scss';
 
 class MyQueue extends React.Component {
-  componentDidMount = () => {
+  componentDidMount(){
 
   };
 

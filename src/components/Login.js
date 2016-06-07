@@ -9,7 +9,7 @@ class Login extends React.Component {
     super(props);
   };
 
-  login = (service) => {
+  login (service) {
     base.authWithOAuthPopup(service, function(error, authData) {
       if (error) {
         console.log("Login Failed!", error);
